@@ -1,0 +1,48 @@
+<RoundedTextInput@TextInput>:
+    font_size: '14dp'
+    background_color: 0,0,0,0
+    cursor_color: (1, 1, 1, 1)
+    canvas.before:
+        Color:
+            rgba: (0, 0, 0, 1)
+    canvas.after:
+        Color:
+            rgba: (15/255, 25/255, 46/255, 0)
+        Ellipse:
+
+
+            angle_start:180
+            angle_end:360
+            pos:(self.pos[0] - self.size[1]/2.0, self.pos[1])
+            size: (self.size[1], self.size[1])
+        Ellipse:
+
+            angle_start:360
+            angle_end:540
+            pos: (self.size[0] + self.pos[0] - self.size[1]/2.0, self.pos[1])
+            size: (self.size[1], self.size[1])
+        Color:
+            rgba: (0, 0, 0, 1)
+        Line:
+            points: self.pos[0] , self.pos[1], self.pos[0] + self.size[0], self.pos[1]
+        Line:
+            points: self.pos[0], self.pos[1] + self.size[1], self.pos[0] + self.size[0], self.pos[1] + self.size[1]
+        Line:
+            ellipse: self.pos[0] - self.size[1]/2.0, self.pos[1], self.size[1], self.size[1], 180, 360
+        Line:
+            ellipse: self.size[0] + self.pos[0] - self.size[1]/2.0, self.pos[1], self.size[1], self.size[1], 360, 540
+
+
+<RoundedButton@Button>:
+    background_color: (0, 0, 0, 0)
+    background_normal: ''
+    canvas.before:
+    
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [30]
+            Color:
+                rgba: (1, 0, 0, 1)
+
+
