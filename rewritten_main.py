@@ -62,11 +62,11 @@ class game_app(App):
     def game(self, instance):
         self.window.clear_widgets()
 
-        self.window.add_widget(Image(source='imahes.zip', anim_delay= 0, mipmap= True, allow_stretch= True, keep_ratio=False, size_hint=(None, None), size=(self.window.width+550, self.window.height+200), pos_hint={'center_x': 0.5, 'center_y': 0.5}))
+        self.window.add_widget(Image(source='imahes.zip', anim_delay= 0.05, mipmap= True, allow_stretch= True, keep_ratio=False, size_hint=(None, None), size=(self.window.width+550, self.window.height+200), pos_hint={'center_x': 0.5, 'center_y': 0.5}))
 
          #self.window.add_widget(Image(source='math_gif_1.gif', anim_delay=0, mipmap=True, allow_stretch=True, keep_ratio=False, size_hint=(None, None), size=(self.window.width + 200, self.window.height + 200), pos_hint={'center_x': 0.5, 'center_y': 0.5}))
         self.window.add_widget(
-            Label(text="Simple.", color=(255, 255, 255), font_name="AvenirLTProBlack2.ttf", font_size=45, pos_hint={'center_x': 0.5, 'center_y': 1}))
+            Label(text="BOOP", color=(255, 255, 255), font_name="bulky.ttf", font_size=75, pos_hint={'center_x': 0.5, 'center_y': 1}))
         self.window.add_widget(
             Label(text="Name of Player 1", color=(255, 255, 255), font_name="AvenirLTProBlack2.ttf", font_size=24, pos_hint={'center_x': 0.5, 'center_y': 0.8}))
         self.player1 = RoundedTextInput(multiline=False, padding=((10, 10, 10, 10)), size_hint=(1, 0.1),
@@ -83,7 +83,7 @@ class game_app(App):
         self.window.add_widget(
             Label(text="Name of Player 2", color=(255, 255, 255), font_name="AvenirLTProBlack2.ttf", font_size=24, pos_hint={'center_x': 0.5, 'center_y': 0.4}))
         self.window.add_widget(self.player2)
-        self.game_start.bind(on_press=self.start_game)
+        # self.game_start.bind(on_press=self.start_game)
         self.window.add_widget(self.game_start)
 
     # def start_game(self, instance):
